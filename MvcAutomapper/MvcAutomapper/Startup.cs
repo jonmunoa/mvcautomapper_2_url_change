@@ -1,7 +1,11 @@
-﻿using Microsoft.Owin;
+﻿using AutoMapper;
+using Microsoft.Owin;
+using MvcAutomapper.App_Start;
+using MvcAutomapper.Models;
 using Owin;
 
 [assembly: OwinStartupAttribute(typeof(MvcAutomapper.Startup))]
+
 namespace MvcAutomapper
 {
     public partial class Startup
@@ -9,6 +13,7 @@ namespace MvcAutomapper
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+            AutoMapperConfig.Configure();
         }
     }
 }

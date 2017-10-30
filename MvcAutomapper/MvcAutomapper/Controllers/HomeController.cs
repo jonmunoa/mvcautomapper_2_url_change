@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AutoMapper;
+using MvcAutomapper.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +12,18 @@ namespace MvcAutomapper.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var usuario = new Usuario()
+            {
+                ID = 1,
+                DNI = "11111111-A",
+                Nombre = "John",
+                Apellidos = "Doe",
+                FechaNacimiento = new DateTime(1990, 1, 1)
+            };
+
+            var usuarioVM = Mapper.Map<Usuario, UsuarioViewModel>(usuario);
+
+            return View(usuarioVM);
         }
 
         public ActionResult About()
