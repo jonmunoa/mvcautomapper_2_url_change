@@ -10,6 +10,10 @@ namespace MvcAutomapper.Controllers
 {
     public class HomeController : Controller
     {
+        /// <summary>
+        /// Load home page
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
             var usuario = new Usuario()
@@ -26,6 +30,10 @@ namespace MvcAutomapper.Controllers
             return View(usuarioVM);
         }
 
+        /// <summary>
+        /// Loads about page
+        /// </summary>
+        /// <returns></returns>
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -33,6 +41,10 @@ namespace MvcAutomapper.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Loads contact page
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
