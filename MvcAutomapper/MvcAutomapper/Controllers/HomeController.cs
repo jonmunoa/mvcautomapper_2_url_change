@@ -21,7 +21,7 @@ namespace MvcAutomapper.Controllers
                 ID = 1,
                 DNI = "11111111-A",
                 Nombre = "Jon",
-                Apellidos = "Muñoa",
+                Apellidos = "Munoa",
                 FechaNacimiento = new DateTime(1990, 1, 1)
             };
 
