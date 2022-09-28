@@ -36,7 +36,7 @@ namespace MvcAutomapper.Controllers
         /// <returns></returns>
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Esto es una pagina de about.";
 
             return View();
         }
